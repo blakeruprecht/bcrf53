@@ -32,7 +32,7 @@
 - Can't break MU academic policy
 
 
-### Step 3 - System Constraints and Requirements
+### Step 4 - System Constraints and Requirements
 - Hardware: personal computers for student submission, TA access, and instructor powers
 - Hardware: server to run the service on, potentially the website/app
 
