@@ -6,35 +6,76 @@
 - TAs
 - Instructors
 
-### Step 2 - Identify User Requirements
-- Students: must be able to submit programming work
-- TAs: must be able to collect assignments
-- Instructors: must be able to manage the course, sections, TAs, and assignments
-- no other people should be able to get access without express acceptance from the instructor
 
-### Step 3 - Identify Relevant Data & Constraints
-#### Student Submissions
-- Require access to the product to submit assignments
-- Require knowledge of correct place to submit assignments
-- Can't access other students assignements
-- Can't change their assignments after the due date/time
-#### TA Collect Assignments
-- Require ability to find all of the necessary assignments
-- Require ability to access all of the submitted assignments from the students
-- Can't change the submission deadline
-- Can't change courses, sections, or assignments without instructor permission
-#### Instructor
-- Require ability to add/remove students
-- Require ability to add/remove sections
-- Require ability to add/remove TAs
-- Require ability to add/remove assignments
-- Can't open up individual assignments to other students
-- Can't break MU academic policy
+### Step 2 - Identify User Requirements, Step 3 - Relevant Data
+#### Students
+Log on to the system
+- must have unique username, password
+- access to service
+- can't have multiple users logged in under the same name
 
+Navigate to proper assignment
+- can't access assignments that are closed, or haven't been opened yet
+- choose proper assignment
+- can't edit assignments
+- requires username, current_assignment
+
+Submit assignments before the deadline
+- must have access to submission link
+- be able to add different types of files or links
+- must be able to add a message to the files
+- require ability to upload files, links
+- must be able to resubmit assignments without losing progress aka history tree
+- requires username, current assignment, date/time, submission link, message, history tree
+
+#### TAs
+Log on to the system
+- must have unique username, password
+- access to service
+- can't have multiple users logged in under the same name
+
+Navigate to proper assignment
+- can't access assignments they're not given permission for
+- can view who has done the assignment/not done it
+- requires data of which TA is accessing the assignment
+- requires data of all possible assignments to access
+
+Grade assignments
+- must be able to see who posted, date/time of submission
+- must be able to access the file/link
+- can't change/edit files/links
+- comment on assignments
+- grade assignments
+- requires username of TA, username of submitter, current assignement, submission link, history of edits, all comments, grade
+
+#### Instructors
+Log on to the system
+- must have unique username, password
+- access to service
+- can't have multiple users logged in under the same name
+
+Add/remove students, TAs, sections, courses
+- see usernames of everybody added
+- require data structure of how assignments are set up
+- data model of all students, TAs, sections, courses
+- data of who belongs to what i.e. the structure
+
+Add/remove assignments
+- give access to specific groups
+- must be able to update assignment without deleting history
+- determine proper submission types
+- set/change deadlines
+- see who has access
+- see who has posted, see files/links
+- change/update grades
+- comment on assignments
+- data of assignment name, text
 
 ### Step 4 - System Constraints and Requirements
-- Hardware: personal computers for student submission, TA access, and instructor powers
-- Hardware: server to run the service on, potentially the website/app
+- storage, memory, CPU, connectivity
+- overall architecture of service
+- can't be accessed by users without proper credentials
+
 
 
 
