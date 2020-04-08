@@ -1,4 +1,4 @@
-Working Group I plan to attend: EVOLUTION
+Working Group I plan to attend: VALUE
 
 # Podcast Reflections
 
