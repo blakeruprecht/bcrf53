@@ -1,10 +1,10 @@
-## Where the app is
+### Where the app is
 https://github.com/blakeruprecht/MU-Software-Engineering/tree/master/assignments/13b.-example
 
-## My GOOGLE_CLIENT_ID
+### My GOOGLE_CLIENT_ID
 734280250142-hrm6r40r4002l4oc6augb6gg3hj4fcdg.apps.googleusercontent.com
 
-## My GOOGLE_CLIENT_SECRET
+### My GOOGLE_CLIENT_SECRET
 5mSP9__DRZL_LXVHheJsGgEZ
 
 ## How it works
