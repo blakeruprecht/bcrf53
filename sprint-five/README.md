@@ -1,6 +1,7 @@
-### Update MAY-04-14:15
-I have gotten the Dex and the Google SSO to work, as seen in the
-`my-google` folder.
+### Update MAY-04-14:30
+I have gotten the Dex and the SSO to work.
+I attached screenshots of proof
+Everything is done and up to date now.
 
 ### Update MAY-03-23:30
 Hey y'all, I haven't been able to finish this yet, I've run into
