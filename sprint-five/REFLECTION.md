@@ -6,7 +6,7 @@ briefly describe what you hope to have functioning with SSO, in terms of "your
 app", by the end of the semester.
 
 --------------------------------------------------------------------------------
-## Reflection Part 1: Make my day
+## Reflection Part 0: Make my day
 Yesterday, I finished up a massive report for another class. I took a break, and 
 then dove into this project around 3:00pm. I worked until 11:30pm, taking a one 
 hour break for dinner. During this time, I was running into a problem where my 
@@ -37,3 +37,12 @@ SOLUTION:
 - reinstalled commandlinetools
 - and now it works... I'm not sure why this fixed it, but I assume some headers
   got lost somewhere along the way... all good now!
+  
+--------------------------------------------------------------------------------
+## Reflection Part 1: Dex
+Now that I finally got the `make` command to work, I breezed through making the 
+login server and the basic app.
+
+
+
+
