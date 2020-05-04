@@ -1,9 +1,16 @@
-REFLECTION.md - SSO is a difficult set of concepts to grasp. Describe what 
-worked, and what did not. Provide a list of sites you visited in your quest to 
-understand and get your app going. If your app did not work (for SSO to Google 
-OAUTH or other provider you selected), explain where you got stuck. Finally, 
-briefly describe what you hope to have functioning with SSO, in terms of "your 
-app", by the end of the semester.
+--------------------------------------------------------------------------------
+## Reflection Part 2: SSO
+I got the google app working with SSO, displaying my picture. Screenshot included.
+I intend to do a bit of a "data expos\'e" with my app, which is just intended to
+show people what type of data can be gathered about them from a simple SSO. For
+my own curiosity, and potentially for others.
+
+
+--------------------------------------------------------------------------------
+## Reflection Part 1: Dex
+Now that I finally got the `make` command to work, I breezed through making the 
+login server and the basic app work. Screenshot included.
+
 
 --------------------------------------------------------------------------------
 ## Reflection Part 0: Make my day
@@ -37,11 +44,6 @@ SOLUTION:
 - reinstalled commandlinetools
 - and now it works... I'm not sure why this fixed it, but I assume some headers
   got lost somewhere along the way... all good now!
-  
---------------------------------------------------------------------------------
-## Reflection Part 1: Dex
-Now that I finally got the `make` command to work, I breezed through making the 
-login server and the basic app.
 
 
 
