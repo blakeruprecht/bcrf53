@@ -1,19 +1,16 @@
---------------------------------------------------------------------------------
-## Reflection Part 2: SSO
+### Reflection Part 2: SSO
 I got the google app working with SSO, displaying my picture. Screenshot included.
 I intend to do a bit of a "data expos\'e" with my app, which is just intended to
 show people what type of data can be gathered about them from a simple SSO. For
 my own curiosity, and potentially for others.
 
 
---------------------------------------------------------------------------------
-## Reflection Part 1: Dex
+### Reflection Part 1: Dex
 Now that I finally got the `make` command to work, I breezed through making the 
 login server and the basic app work. Screenshot included.
 
 
---------------------------------------------------------------------------------
-## Reflection Part 0: Make my day
+### Reflection Part 0: Make my day
 Yesterday, I finished up a massive report for another class. I took a break, and 
 then dove into this project around 3:00pm. I worked until 11:30pm, taking a one 
 hour break for dinner. During this time, I was running into a problem where my 
