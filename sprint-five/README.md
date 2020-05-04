@@ -1,4 +1,8 @@
-# Not finished yet
+# Update MAY-04-14:15
+I have gotten the Dex and the Google SSO to work, as seen in the
+`my-google` folder.
+
+# Update MAY-03-23:30
 Hey y'all, I haven't been able to finish this yet, I've run into
 problems with not being able to make the Dex app. I ended up 
 encountering a fatal error: file not found within the security
@@ -20,4 +24,5 @@ With that being said, I 100% plan to finish this project by
 tomorrow, and would really appreciate some leniency for grading.
 I just finished a massive report that took me all week earlier
 today, so I was delayed in starting.
+
 
