@@ -1,5 +1,18 @@
-## Quick Info
+## Assignment 13c Info
+
+#### Moved from other fork
 I moved this project from my fork of MU-Software Engineering to this repo.
+
+#### Changed Goal
+I've changed the goal of my app, because my last goal (display data from login) proved to be really
+simple and boring. Displaying the data that SSO tracks would be trivial, and is basically already
+done by the example app.  
+
+### New Goal
+Instead, I have a new goal. To display local food and drink prices (okay,
+mainly just beer). What this means, is the app now displays drink deals, and by next week, will
+allow users to add deals to the list. This took me quite a while to figure out, since I've never
+done anything like this before, but it's looking pretty interesting so far!
 
 ## Running the App
 Same as before,  
