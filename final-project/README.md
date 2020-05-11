@@ -3,8 +3,8 @@ I moved this project from my fork of MU-Software Engineering to this repo.
 
 ## Running the App
 Same as before,
-GOOGLE_CLIENT_ID=734280250142-hrm6r40r4002l4oc6augb6gg3hj4fcdg.apps.googleusercontent.com
-GOOGLE_CLIENT_SECRET=5mSP9__DRZL_LXVHheJsGgEZ
+GOOGLE_CLIENT_ID=734280250142-hrm6r40r4002l4oc6augb6gg3hj4fcdg.apps.googleusercontent.com  
+GOOGLE_CLIENT_SECRET=5mSP9__DRZL_LXVHheJsGgEZ  
 `python app.py`
 and it's up and running.
 
