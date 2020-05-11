@@ -1,9 +1,9 @@
 ## Assignment 13c Info
 
-#### Moved from other fork
+### I moved repos
 I moved this project from my fork of MU-Software Engineering to this repo.
 
-#### Changed Goal
+### Changed Goal
 I've changed the goal of my app, because my last goal (display data from login) proved to be really
 simple and boring. Displaying the data that SSO tracks would be trivial, and is basically already
 done by the example app.  
