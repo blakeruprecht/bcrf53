@@ -1,3 +1,6 @@
+## Assignment 14 - FINAL Info
+The second iteration of my project will be up by today.
+
 ## Assignment 13c Info
 
 ### I moved repos
