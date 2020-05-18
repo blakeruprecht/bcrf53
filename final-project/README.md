@@ -33,3 +33,5 @@ https://www.c-sharpcorner.com/article/create-python-flask-web-application-and-di
 https://code.tutsplus.com/tutorials/creating-a-web-app-from-scratch-using-python-flask-and-mysql--cms-22972  
 https://pythonspot.com/flask-web-app-with-python/  
 https://www.freecodecamp.org/news/how-to-build-a-web-application-using-flask-and-deploy-it-to-the-cloud-3551c985e492/  
+  
+https://pythonspot.com/flask-web-forms/
