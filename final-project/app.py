@@ -93,9 +93,6 @@ def write_to_disk(bar, days, type, cost, volume):
         df.to_excel(writer, sheet_name="Beer is good", header=False, index=False)
     writer.save()
 
-    #data = open("beer_deals.xlsx")
-    #data.write('Bar={}, Days={}, Type={}, Cost={}, Volume={} \n'.format(bar,days,type,cost,volume))
-
 
 # MY PROJECT PAGES -------------------------------------------------------------
 
