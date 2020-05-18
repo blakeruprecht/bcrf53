@@ -1,11 +1,16 @@
+################################################################################
+# LIBRARIES
+################################################################################
+
 # Python standard libraries
 import json
 import os
 import sqlite3
 import pandas as pd
+from openpyxl import load_workbook
 
 # Third party libraries
-from flask import Flask, redirect, request, url_for, render_template, session
+from flask import Flask, redirect, request, url_for, render_template, session, flash
 from flask_login import (
     LoginManager,
     current_user,
@@ -15,10 +20,17 @@ from flask_login import (
 )
 from oauthlib.oauth2 import WebApplicationClient
 import requests
+from flask_wtf import FlaskForm
+from wtforms import Form, TextField, TextAreaField, StringField, BooleanField, SubmitField, validators
 
 # Internal imports
 from db import init_db_command
 from user import User
+
+
+################################################################################
+# CONFIG
+################################################################################
 
 # Configuration
 GOOGLE_CLIENT_ID = os.environ.get("GOOGLE_CLIENT_ID", None)
@@ -29,6 +41,7 @@ GOOGLE_DISCOVERY_URL = (
 
 # Flask app setup
 app = Flask(__name__)
+app.config.from_object(__name__)
 app.secret_key = os.environ.get("SECRET_KEY") or os.urandom(24)
 
 # User session management setup
@@ -41,7 +54,6 @@ login_manager.init_app(app)
 def unauthorized():
     return "You must be logged in to access this content.", 403
 
-
 # Naive database setup
 try:
     init_db_command()
@@ -52,12 +64,42 @@ except sqlite3.OperationalError:
 # OAuth2 client setup
 client = WebApplicationClient(GOOGLE_CLIENT_ID)
 
-# Flask-Login helper to retrieve a user from our db
 @login_manager.user_loader
 def load_user(user_id):
     return User.get(user_id)
 
 
+################################################################################
+# WEB APP PAGES
+################################################################################
+
+# Reusable Forms to allow users to add deals
+class ReusableForm(Form):
+    bar = TextField('Bar: ', [validators.DataRequired()])
+    days = TextField('Days: ', [validators.DataRequired()])
+    type = TextField('Type: ', [validators.DataRequired()])
+    cost = TextField('Cost (w/tip): ', [validators.DataRequired()])
+    volume = TextField('Volume (oz): ', [validators.DataRequired()])
+
+# This function writes the variables to the excel spreadsheet
+def write_to_disk(bar, days, type, cost, volume):
+
+    data = [[bar, days, type, cost, volume]]
+    df = pd.DataFrame(data)
+
+
+    with pd.ExcelWriter("beer_deals.xlsx", mode='a') as writer:
+    #writer = pd.ExcelWriter("beer_deals.xlsx", mode='a')
+        df.to_excel(writer, sheet_name="Beer is good", header=False, index=False)
+    writer.save()
+
+    #data = open("beer_deals.xlsx")
+    #data.write('Bar={}, Days={}, Type={}, Cost={}, Volume={} \n'.format(bar,days,type,cost,volume))
+
+
+# MY PROJECT PAGES -------------------------------------------------------------
+
+# HOME PAGE
 @app.route("/")
 def index():
     if current_user.is_authenticated:
@@ -73,12 +115,32 @@ def index():
         return '<a class="button" href="/login">Google Login</a>'
 
 
+# DEALS PAGE
 @app.route('/deals', methods=("POST", "GET"))
 def html_table():
     df = pd.read_excel("beer_deals.xlsx")
     return render_template('simple.html',  tables=[df.to_html(classes='data')], titles=df.columns.values)
 
 
+# ADD DEALS PAGES
+@app.route('/add', methods=("POST", "GET"))
+def add():
+    form = ReusableForm(request.form)
+    # Display the form to request all of the data fields
+    if request.method == 'POST':
+        bar = request.form['bar']
+        days = request.form['days']
+        type = request.form['type']
+        cost = request.form['cost']
+        volume = request.form['volume']
+        if form.validate():
+            write_to_disk(bar,days,type,cost,volume)
+        else:
+            flash('Error: All Fields are Required!')
+    return render_template('index.html', form=form)
+
+
+# SSO PAGES --------------------------------------------------------------------
 @app.route("/login")
 def login():
     # Find out what URL to hit for Google login
